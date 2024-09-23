@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <nav class="bg-red-900 shadow-lg">
@@ -12,14 +13,26 @@
             <div class="flex justify-between items-center py-4">
                 <div class="text-2xl font-bold text-gray-800">Mi E-Commerce</div>
                 <ul class="flex space-x-6 text-gray-600">
-                    <li><a href="#" class="hover:text-gray-800">Inicio</a></li>
-                    <li><a href="#" class="hover:text-gray-800">Tienda</a></li>
-                    <li><a href="#" class="hover:text-gray-800">Ofertas</a></li>
-                    <li><a href="#" class="hover:text-gray-800">Contacto</a></li>
+                    <li><a href="#" class="hover:bg-gray-800">Inicio</a></li>
+                    <li><a href="#" class="hover:bg-gray-800">Tienda</a></li>
+                    <li><a href="#" class="hover:bg-gray-800">Ofertas</a></li>
+                    <li><a href="#" class="hover:bg-gray-800">Contacto</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
+       <!-- Banner -->
+       <section class="bg-cover bg-center h-96" style="background-image: url('https://via.placeholder.com/1600x600');">
+        <div class="container mx-auto h-full flex justify-center items-center">
+            <div class="text-center text-white">
+                <h1 class="text-5xl font-bold mb-4">Bienvenidos a Mi E-Commerce</h1>
+                <p class="text-lg">Descubre nuestras colecciones más exclusivas</p>
+                <a href="#" id="btn-ex" class="mt-6 inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg">Explorar ahora</a>
+            </div>
+        </div>
+    </section>
+
    <script src="./assets/index.js"></script>
 </body>
 </html>
