@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let nombreProducto = "Remeras";
+    let precioUnitario = 2000;
+    let cantidadDeseada = prompt(`Ingrese la cantidad de ${nombreProducto}($${precioUnitario} C/U) que quiere comprar: `);
+    
+    let costoTotalSinDescuentos = cantidadDeseada * precioUnitario;
+
+    if(cantidadDeseada >= 5 ) {
+    let newCosto = costoTotalSinDescuentos * 0.9;
+    costoTotalSinDescuentos *= 0.9
+    console.log(newCosto)
+    console.log(costoTotalSinDescuentos)
+    }
+
+    alert("su copra es de $" + costoTotalSinDescuentos + "se aplico el 10%")
+   
+   </script>
+
+
+</body>
+</html>
