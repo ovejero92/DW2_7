@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex justify-center items-center h-screen">
+        <div class="space-x-4">
+            <button class="bg-blue-500 text-white px-6 py-2 rounded-md shadow-md hover:bg-blue-700" onclick="agregarProductos()">Agregar Productos</button>
+            <button class="bg-red-500 text-white px-6 py-2 rounded-md shadow-md hover:bg-red-700" onclick="eliminarProducto()">Eliminar Producto</button>
+            <button class="bg-green-500 text-white px-6 py-2 rounded-md shadow-md hover:bg-green-700" onclick="verListado()">Ver listado de productos</button>
+        </div>
+    </div>
+    <script>
+    let listaProductos = [];
+
+    function agregarProductos() {
+        let cantidad = prompt("¿Cuantos queres agregar:");
+
+        for (let i = 0; i < cantidad ; i++) {
+        let producto = prompt(`Ingresa el nombre del producto ${i+1} :`);
+        listaProductos.push(producto);
+        }
+        Swal.fire({
+                icon: 'success',
+                title: 'Productos agregados',
+                text: listaProductos.join(", ")
+            });
+    }
+
+    function eliminarProducto() {
+        let productoEliminado = prompt("Ingrese el nombre del producto que deseas eliminar:");
+        let index = listaProductos.indexOf(productoEliminado)
+
+        if(index !== -1) {
+            listaProductos.splice(index,1);
+            Swal.fire({
+                    icon: 'success',
+                    title: 'Producto eliminado',
+                    text: `Producto "${productoAEliminar}" eliminado.`
+                });
+        } else {
+            Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: `El producto "${productoAEliminar}" no existe en la lista.`
+                });
+        }
+    }
+
+    function verListado() {
+            if (listaProductos.length > 0) {
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Listado de productos',
+                    text: listaProductos.join(", ")
+                });
+            } else {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'No hay productos',
+                    text: 'La lista de productos está vacía.'
+                });
+            }
+        }
+
+
+    </script>
+</body>
+</html>
