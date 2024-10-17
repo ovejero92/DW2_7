@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const productos = ["Manzana","Naranja","Pera","Limon"];
+
+    for(let i = 0; i < productos.length ; i++) {
+        console.log(`Produto ${i + 1} : ${productos[i]}` )
+    }
+
+    console.log("Se vendio el ultimo producto.");
+
+    let productoELiminado = productos.pop();
+    
+
+    for(let i = 0; i < productos.length ; i++) {
+        console.log(`Produto ${i + 1} : ${productos[i]}` )
+    }
+    console.log(`El producto eliminado fue: ${productoELiminado}`)
+
+    </script>
+</body>
+</html>

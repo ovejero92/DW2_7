@@ -1,0 +1,19 @@
+nav {
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+
+}
+.ListaNav{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.ListaNav li{
+    margin-left: 16px;
+    list-style: none;
+}
+.of {
+    color: brown;
+}
