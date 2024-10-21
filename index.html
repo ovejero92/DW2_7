@@ -3,39 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>E-Commerce</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-<body>
-    <nav class="bg-red-900 shadow-lg">
+<body class="bg-gray-100 ">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg sticky z-10 top-0 w-full">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <div class="text-2xl font-bold text-gray-800">Mi E-Commerce</div>
                 <ul class="flex space-x-6 text-gray-600">
-                    <li><a href="#" class="hover:bg-gray-800">Inicio</a></li>
-                    <li><a href="#" class="hover:bg-gray-800">Tienda</a></li>
-                    <li><a href="#" class="hover:bg-gray-800">Ofertas</a></li>
-                    <li><a href="#" class="hover:bg-gray-800">Contacto</a></li>
+                    <li><a href="#" class="hover:text-gray-800">Inicio</a></li>
+                    <li><a href="./pages/tienda.html" class="hover:text-gray-800">Tienda</a></li>
+                    <li><a href="#" class="hover:text-gray-800">Ofertas</a></li>
+                    <li><a href="#" class="hover:text-gray-800">Contacto</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-       <!-- Banner -->
-       <section class="bg-cover bg-center h-96" style="background-image: url('https://via.placeholder.com/1600x600');">
-        <div class="container mx-auto h-full flex justify-center items-center">
-            <div class="text-center text-white">
-                <h1 class="text-5xl font-bold mb-4">Bienvenidos a Mi E-Commerce</h1>
-                <p class="text-lg">Descubre nuestras colecciones más exclusivas</p>
-                <a href="#" id="btn-ex" class="mt-6 inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg">Explorar ahora</a>
+    <section class=" w-full ">
+        <div class="w-full lg:h-[37rem] sm:h-[20rem]" style="background-image: url('./assets/Images/FlayerHeader_CHICO.png'); background-repeat:no-repeat; background-size: cover; background-position: center;">
+            <div class="container mx-auto h-full flex justify-center items-center">
+                <div class="text-center text-white relative">
+                  <button  class="absolute -bottom-[8rem] -left-[19rem] inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg lg:-bottom-[13rem] lg:w-[12rem] lg:text-2xl lg:h-[4rem] lg:-left-[32rem]" id="btn-ex">Explorar</button>
+                </div>
+            </div>
+        </div>
+    </section> 
+    
+    <section class="w-full h-full flex justify-center">
+
+        <div class="w-[12.5rem] h-[14rem] bg-black rounded-2xl mt-4 mr-4 relative lg:w-[17rem] lg:h-[16rem]">
+            <div class="absolute -bottom-[0.9rem] left-[5rem] ">
+            <img src="./assets/Images/auricuale_BLACK.png" alt="auricuar" width="99" height="40">
+            </div>
+            <p class="absolute top-[3rem] left-[1rem] text-white">Enjoy</p>
+            <p class="absolute top-[5rem] text-lg font-black  left-[1rem] text-white">With</p>
+            <p class="absolute top-[7.8rem] left-[1rem] text-3xl font-black text-gray-400">EARPHONE</p>
+            <button  class="absolute top-[11rem] left-[1rem] px-4 py-1 bg-blue-500 text-white font-semibold rounded-lg" id="btn-ex">Explorar</button>
+        </div>
+
+        <div class="w-[12.5rem] h-[14rem] bg-amber-200 rounded-2xl mt-4 mr-4 relative  lg:w-[17rem] lg:h-[16rem]">
+            <div class="absolute -bottom-[0.9rem] left-[5rem]">
+            <div style="background-image: url('./assets/Images/smartWatch.png');width: 310px;height: 190px;background-repeat: no-repeat;background-size: contain;" class="absolute -top-[14rem] -left-[6.6rem] lg:-top-[16rem] lg:-left-[2rem]"></div>
+            <p class="absolute -top-[12rem] -left-16 text-black lg:-top-[14rem] lg:-left-[2rem] lg:text-2xl">Near</p>
+            <p class="absolute -top-[10rem] text-lg font-black  -left-[4.3rem] text-black lg:-top-[11.5rem] lg:-left-[2rem] lg:text-2xl">Wear</p>
+            <p class="absolute -top-[7rem] -left-[4.7rem] text-3xl font-black text-gray-400 lg:-top-[7.5rem] lg:-left-[3rem] lg:text-4xl">SmartWathc</p>
+            <button  class="absolute -top-[4rem] -left-[4rem] px-4 py-1 bg-blue-500 text-white font-semibold rounded-lg" id="btn-ex">Explorar</button>
+            </div>
+        </div>
+
+        <div class="w-[12.5rem] h-[14rem] bg-black rounded-2xl mt-4 mr-4 relative  lg:w-[27rem] lg:h-[16rem]">
+            <div class="absolute -bottom-[0.9rem] left-[5rem]">
+            <div style="background-image: url('./assets/Images/pc-note.png');width: 310px;height: 190px;background-repeat: no-repeat;background-size: contain;" class="absolute -top-[14rem] -left-[6.6rem] lg:-top-[15rem] lg:left-[6rem]"></div>
+            <p class="absolute -top-[12rem] -left-14 text-white lg:text-2xl lg:-top-[14rem] lg:left-[1rem]">trend</p>
+            <p class="absolute -top-[10rem] text-lg font-black  -left-[4.3rem] text-white lg:-top-[11.5rem] lg:left-[1rem]">Devices</p>
+            <p class="absolute -top-[7.5rem] -left-[3.4rem] text-3xl font-black text-gray-500 lg:-top-[8rem] lg:left-[1rem] lg:text-5xl">LAPTOP</p>
+            <button  class="absolute -top-[4rem] -left-[3.8rem] px-4 py-1 bg-blue-500 text-white font-semibold rounded-lg" id="btn-ex">Explorar</button>
+            </div>
+        </div>
+
+        </section>
+    
+    <!-- Información destacada -->
+    <section class="py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8">¿Por qué elegirnos?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 shadow-lg rounded-lg">
+                    <img src="https://via.placeholder.com/100" alt="Icono" class="mx-auto mb-4">
+                    <h3 class="text-2xl font-semibold mb-2">Envío rápido</h3>
+                    <p>Ofrecemos envío gratuito y rápido en todos nuestros productos.</p>
+                </div>
+                <div class="bg-white p-6 shadow-lg rounded-lg">
+                    <img src="https://via.placeholder.com/100" alt="Icono" class="mx-auto mb-4">
+                    <h3 class="text-2xl font-semibold mb-2">Atención al cliente 24/7</h3>
+                    <p>Nuestro equipo de soporte está disponible para ayudarte en todo momento.</p>
+                </div>
+                <div class="bg-white p-6 shadow-lg rounded-lg">
+                    <img src="https://via.placeholder.com/100" alt="Icono" class="mx-auto mb-4">
+                    <h3 class="text-2xl font-semibold mb-2">Garantía de devolución</h3>
+                    <p>Si no estás satisfecho, puedes devolver el producto sin problemas.</p>
+                </div>
             </div>
         </div>
     </section>
-    
 
-    <!-- <script src="./assets/funciones.js"></script>
-    <script src="./assets/index.js"></script> -->
-    <script src="./assets/objetos.js"></script>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-200 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between">
+                <div>
+                    <h4 class="font-bold text-lg">Mi E-Commerce</h4>
+                    <p class="mt-2">Tu tienda de confianza para las mejores ofertas.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg">Enlaces útiles</h4>
+                    <ul class="mt-2 space-y-2">
+                        <li><a href="#" class="hover:underline">Política de Privacidad</a></li>
+                        <li><a href="#" class="hover:underline">Términos y Condiciones</a></li>
+                        <li><a href="#" class="hover:underline">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg">Síguenos</h4>
+                    <div class="mt-2 flex space-x-4">
+                        <a href="#"><img src="https://via.placeholder.com/24" alt="Facebook"></a>
+                        <a href="#"><img src="https://via.placeholder.com/24" alt="Instagram"></a>
+                        <a href="#"><img src="https://via.placeholder.com/24" alt="Twitter"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/index.js"></script>
 </body>
 </html>

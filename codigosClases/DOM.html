@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+   <h1 id="MiTitulo" >Mi titulo</h1>
+ <a href="www.google.com">google</a>
+ <img src="" alt="">
+   <ul>
+    <li>sdfasdfadf</li>
+    <li>Hola <span id="MiNombre"></span></li>
+    <li>adfsafsafd</li>
+    </ul>
+
+    <ul>
+        <li class="lis">sdfasdfadf</li>
+        <li class="lis">Hola <span>gus</span></li>
+        <li >adfsafsafd</li>
+        </ul>
+
+        <h2>Otra cosa</h2>
+
+        <h2>lakjdalkdj</h2>
+
+        <h2>adfsafsafd</h2>
+
+        <h2>dasdasdasd</h2>
+    <script>
+    
+    const h1 = document.getElementById("MiTitulo")
+    const listas = document.getElementsByTagName("li")
+    const listas2 = document.getElementsByClassName("lis")
+
+
+    const parrafo = document.querySelectorAll(".lis")
+
+    console.log(parrafo)
+
+    const h2 = document.querySelectorAll("h2");
+
+//Cambia el color
+// h2[0].style.color = "red";
+// h2[1].style.color = "green";
+// h2[3].style.color = "blue";
+
+for(let i = 0 ; i < 2 ; i++) {
+    h2[i].style.color = "red"
+}
+// for(let pro of h2) {
+   
+// }
+h2.forEach( (X) => {
+ X.style.color = "green"
+})
+
+//Cambia tipografía
+h2.style.fontFamily = "Arial, Helvetica, sans-serif";
+//Cambia tamaño de letra
+h2.style.fontSize = "40px";
+
+const MiNombre = document.querySelector("#MiNombre")
+
+MiNombre.textContent = "Gustavo"
+
+    </script>
+
+    
+</body>
+</html>

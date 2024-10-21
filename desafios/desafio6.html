@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const producto = {
+            //propiedad 1
+            nombre:"camisetas",
+            //propiedad 2
+            precio:250, 
+            //propiedad 3
+            cantidadDisponible:50,
+         
+        }
+        
+        producto.nombre = "Zapatillas"
+
+        producto.categoria = "Calzado";
+
+        delete producto.cantidadDisponible;
+
+        console.log(producto) // camiseta
+
+        let miArray = ["","",""]
+
+        miArray.push("12")
+    </script>
+</body>
+</html>
