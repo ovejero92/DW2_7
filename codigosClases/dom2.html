@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   <div id="parrafo"></div>
+
+   <p class="ToDelete">laksjhdlajskhd</p>
+
+    <script>
+        let titulo = document.createElement("h1")
+
+        titulo.innerText = "Termo"
+
+        //Creación del Elemento
+let nuevoTexto = document.createElement("p");
+//Personalización del Elemento
+nuevoTexto.innerText = "Este es un Nuevo Parrafo";
+//Mostrar el elemento creado en la Consola
+console.log(nuevoTexto);
+
+
+
+
+      let div =  document.getElementById("parrafo")
+
+
+      let cuerpo = document.body
+
+      cuerpo.appendChild(titulo)
+      div.appendChild(nuevoTexto)
+
+//Compruebo si el Elemento creado esta Conectado
+console.log(nuevoTexto.isConnected);
+
+    let ToDelete = document.querySelector(".ToDelete")
+
+    ToDelete.remove()
+    
+    </script>
+</body>
+</html>
