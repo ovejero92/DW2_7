@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    let productos = ["producto1","producto2","producto3","producto2","producto3","producto2","producto3","producto2","producto3","producto2","producto3"]
+
+    // for(let i = 0 ; i < productos.length; i = i + 2) {
+    // console.log(`${productos[i]}`)
+    // }
+
+    for(let producto of productos) {
+        let h2 = document.createElement("h2")
+        h2.innerHTML = producto
+        document.body.appendChild(h2)
+    }
+
+
+
+    </script>
+</body>
+</html>

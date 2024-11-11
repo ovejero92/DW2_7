@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">Titulo Principal</h1>
+    <button onclick="click" id="click">click</button>
+    <script>
+    // let titulo = document.getElementById("titulo")
+    
+    // titulo.addEventListener("mouseover",() => {
+    //     titulo.style.backgroundColor = "red"
+    // });
+
+    // titulo.addEventListener("mouseout",() => {
+    //     titulo.style.backgroundColor = "green"
+    // })
+
+    // document.getElementById("click").addEventListener("click",(e) => {
+    // console.log(e)
+    // e.target.innerText = "cliqueado"
+    // e.target.style.color = "blue"
+    // })
+
+
+
+    // let boton = document.querySelector("#click");
+
+    // boton.addEventListener("click", function() {
+    //     alert("hiciste click")
+    // })
+
+    // boton.addEventListener("click", () => {
+    //     alert("hiciste click")
+    // })
+
+    // boton.addEventListener("click",click)
+
+    // function click() {
+    //     console.log("hiciste click")
+    // }
+
+    // document.querySelector("#click").addEventListener("click",() => {
+    //     console.log("hiciste  click")
+    // })
+
+    // document.querySelector("#click").addEventListener("dblclick",() => {
+    //     console.log("hiciste doble click")
+    // })
+// Crear una Promesa
+let miPromesa = new Promise(function(resolve, reject) {
+    // Simular una tarea que toma tiempo (por ejemplo, una solicitud a un servidor)
+    setTimeout(function() {
+        let exito = false; // Cambiar a false para simular un fallo
+        if (exito) {
+            resolve("La terea fue completada con éxito");
+        } else {
+            reject("Hubo un problema al completar la terea");
+        }
+    }, 2000); // Simulamos una tarea que toma 2 segundos
+});
+// Utilizar la Promesa
+miPromesa.then(function(resultado) {
+    console.log("Éxito:", resultado);  
+})
+.catch(function(error) {
+   console.log("Error:", error);
+});
+
+    </script>
+</body>
+</html>

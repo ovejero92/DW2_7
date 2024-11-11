@@ -5,31 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/76e20a326e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-        <!-- Navbar -->
-        <nav class="bg-white shadow-lg sticky z-10 top-0 w-full">
-            <div class="container mx-auto px-4">
-                <div class="flex justify-between items-center py-4">
-                    <div class="text-2xl font-bold text-gray-800">Mi E-Commerce</div>
-                    <ul class="flex space-x-6 text-gray-600">
-                        <li><a href="../index.html" class="hover:text-gray-800">Inicio</a></li>
-                        <li><a href="#" class="hover:text-gray-800">Tienda</a></li>
-                        <li><a href="#" class="hover:text-gray-800">Ofertas</a></li>
-                        <li><a href="#" class="hover:text-gray-800">Contacto</a></li>
-                    </ul>
-                </div>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg sticky z-10 top-0 w-full">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-gray-800">Mi E-Commerce</div>
+                <ul class="flex space-x-6 text-gray-600 relative">
+                    <li><a href="../index.html" class="hover:text-gray-800">Inicio</a></li>
+                    <li><a href="#" class="border-b-4 border-indigo-500 pb-[.3rem] hover:text-gray-800">Tienda</a></li>
+                    <li><a href="./promo.html" class="hover:text-gray-800">Ofertas</a></li>
+                    <li><a href="./contacto.html" class="hover:text-gray-800">Contacto</a></li>
+                    <li class="absolute -right-[2.5rem] -top-[0.7rem] bg-black p-3 rounded-lg">
+                        <button onclick="abrirCarrito()" class="hover:text-gray-800">
+                            <i class="fa-solid fa-bag-shopping text-white"></i>
+                        </button>
+                        <span id="countCard" class="absolute hidden w-[2rem] h-[2rem] rounded-lg bg-red-800 text-white text-2xl scale-50 flex justify-center -right-4 top-6"></span>
+                    </li>
+                </ul>
             </div>
-        </nav>
-        
-        <section class="container mx-auto mt-10">
-            <div id="categorias" class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                <!-- Aquí se insertarán las categorías -->
-            </div>
-        </section>
+        </div>
+    </nav>
 
-         <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-200 py-8">
+    <!-- Carrito -->
+    <div id="modalCarrito" class="fixed inset-0 flex items-center justify-center bg-gray-600 bg-opacity-50 hidden">
+        <div class="bg-white w-96 rounded-lg shadow-lg p-6" >
+            
+            <h2 class="text-lg font-bold text-gray-800">Carrito de Compras</h2>
+            <div id="contenidoCarrito" class="mt-4 space-y-4">
+                
+            </div>
+            <p class="mt-4 font-bold">Total: $<span id="totalCarrito">0</span></p>
+            <button onclick="cerrarCarrito()" class="mt-4 w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded">Cerrar Carrito</button>
+            <button onclick="finalizarCompra()" class="mt-4 w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded">Comprar</button>
+        </div>
+    </div>
+
+    <!-- Categorías -->
+    <section class="container mx-auto mt-10">
+        <div id="categorias" class="grid grid-cols-2 sm:grid-cols-4 gap-4"></div>
+    </section>
+
+    <!-- Productos -->
+    <section class="container mx-auto mt-10">
+        <div id="productos" class="grid grid-cols-2 sm:grid-cols-4 gap-4"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-200 py-8 mt-6">
         <div class="container mx-auto px-4">
             <div class="flex justify-between">
                 <div>
@@ -55,7 +81,6 @@
             </div>
         </div>
     </footer>
-
     <script src="../assets/tienda.js"></script>
 </body>
 </html>

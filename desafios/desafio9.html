@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let miBtn = document.createElement("button")
+
+        miBtn.id = "miBtn"
+        miBtn.innerHTML = "Agregar al carrito"
+
+        miBtn.addEventListener('click', function() {
+            const h3 = document.createElement("h3");
+            h3.innerHTML = 'Agregado';
+            h3.style.color = "red";
+            document.body.appendChild(h3);
+        })
+
+        document.body.appendChild(miBtn)
+
+    </script>
+</body>
+</html>
